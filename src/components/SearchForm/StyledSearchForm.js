@@ -4,7 +4,9 @@ import { colors } from "../../style/Variables.js";
 export const StyledForm = styled.form`
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 30px;
 `;
 
@@ -37,4 +39,20 @@ export const SearchInput = styled.input`
   ::placeholder {
     color: ${colors.White};
   }
+`;
+
+export const SelectWrapper = styled.div`
+  width: 90%;
+  margin-top: 50px;
+`;
+
+export const SelectInput = styled.select`
+  width: 50%;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 0 0 0 10px;
+  background-color: ${colors.DarkBlue};
+  border-radius: 5px;
+  color: ${colors.White};
 `;

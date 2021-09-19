@@ -4,6 +4,8 @@ import {
   SearchInput,
   Icon,
   InputWrapper,
+  SelectInput,
+  SelectWrapper,
 } from "./StyledSearchForm.js";
 import { FaSearch } from "react-icons/fa";
 
@@ -14,8 +16,18 @@ export const SearchForm = () => {
         <Icon>
           <FaSearch />
         </Icon>
-        <SearchInput placeholder="Search for a country..." />
+        <SearchInput name="inp" placeholder="Search for a country..." />
       </InputWrapper>
+      <SelectWrapper>
+        <SelectInput>
+          <option value="">Filter by Region</option>
+          <option value="Africa">Africa</option>
+          <option value="America">America</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </SelectInput>
+      </SelectWrapper>
     </StyledForm>
   );
 };
