@@ -21,4 +21,6 @@ export const Description = styled.div`
 
 export const Title = styled.h3`
   margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: bold;
 `;
