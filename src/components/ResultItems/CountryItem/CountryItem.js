@@ -1,4 +1,3 @@
-import React from "react";
 import { Item, Image, Description, Title } from "./StyledCountryItem";
 
 export const CountryItem = () => {

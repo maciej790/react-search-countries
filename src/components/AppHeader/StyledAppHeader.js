@@ -11,7 +11,13 @@ export const Header = styled.header`
   padding: 0 15px 0 15px;
 `;
 
-export const SwitchTheme = styled.div``;
+export const SwitchTheme = styled.button`
+  border: none;
+  outline: none;
+  height: 50px;
+  background-color: transparent;
+  color: ${colors.White};
+`;
 
 export const Icon = styled.i`
   margin: 0 7px 0 0;
