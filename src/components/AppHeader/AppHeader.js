@@ -1,4 +1,3 @@
-import React from "react";
 import { Header, SwitchTheme, Icon } from "./StyledAppHeader";
 import { FaRegSun } from "react-icons/fa";
 

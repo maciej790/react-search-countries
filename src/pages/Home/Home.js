@@ -7,9 +7,9 @@ import { Wrapper } from "./StyledHome.js";
 export const Home = () => {
   return (
     <Wrapper>
-      <AppHeader />
-      <SearchForm />
-      <ResultItems />
+        <AppHeader />
+        <SearchForm />
+        <ResultItems />
     </Wrapper>
   );
 };
