@@ -23,6 +23,7 @@ export const Icon = styled.div`
   display: flex;
   align-items: center;
   padding: 0 0 0 30px;
+  ${props => props.theme === 'light' && `color: ${colors.DarkGray}`};
 `;
 
 export const SearchInput = styled.input`
@@ -31,13 +32,17 @@ export const SearchInput = styled.input`
   border: none;
   outline: none;
   background-color: ${colors.DarkBlue};
+  ${props => props.theme === 'light' && `background-color: ${colors.White}`};
+  ${props => props.theme === 'light' && `color: ${colors.DarkGray}`};
   border-radius: 5px;
   text-align: center;
   padding-left: 20px;
   color: ${colors.White};
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.05);
 
   ::placeholder {
     color: ${colors.White};
+    ${props => props.theme === 'light' && `color: ${colors.DarkGray}`};
   }
 `;
 
@@ -53,6 +58,9 @@ export const SelectInput = styled.select`
   outline: none;
   padding: 0 0 0 10px;
   background-color: ${colors.DarkBlue};
+  ${props => props.theme === 'light' && `background-color: ${colors.White}`};
   border-radius: 5px;
   color: ${colors.White};
+  ${props => props.theme === 'light' && `color: ${colors.VeryDarkBlue2}`};
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.05);
 `;

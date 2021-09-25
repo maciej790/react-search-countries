@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { Item, Image, Description, Title } from "./StyledCountryItem";
+import { ThemeContext } from "../../../lib/ContextTheme.js";
 
 export const CountryItem = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <Item>
+    <Item theme={theme}>
       <Image />
       <Description>
         <Title>Germany</Title>
