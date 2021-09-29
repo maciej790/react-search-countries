@@ -4,9 +4,8 @@ import { colors } from "./Variables";
 export const AppWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
-  color: ${colors.White};
-  ${props => props.theme === 'light' && `color: ${colors.VeryDarkBlue2}`};
-  background-color: ${colors.VeryDarkBlue1};
-  ${props => props.theme === 'light' && `background-color: ${colors.VeryLightGray}`};
-
+  color: ${({ theme }) =>
+    theme === "light" ? colors.VeryDarkBlue2 : colors.White};
+  background-color: ${({ theme }) =>
+    theme === "light" ? colors.VeryLightGray : colors.VeryDarkBlue1};
 `;

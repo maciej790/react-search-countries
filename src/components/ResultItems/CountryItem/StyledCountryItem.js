@@ -4,10 +4,10 @@ import { colors } from "../../../style/Variables";
 export const Item = styled.div`
   width: 80%;
   height: 400px;
-  background-color: ${colors.DarkBlue};
-  ${props => props.theme === 'light' && `background-color: ${colors.White}`};
+  background-color: ${({ theme }) =>
+    theme === "light" ? colors.White : colors.DarkBlue};
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.05);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
 `;
 
 export const Image = styled.img`
@@ -25,5 +25,4 @@ export const Title = styled.h3`
   margin-bottom: 15px;
   font-size: 25px;
   font-weight: bold;
-  ${props => props.theme === 'light' && `color: ${colors.VeryDarkBlue2}`};
 `;
