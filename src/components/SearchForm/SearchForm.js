@@ -9,17 +9,25 @@ import {
 } from "./StyledSearchForm.js";
 import { FaSearch } from "react-icons/fa";
 
-export const SearchForm = () => {
+export const SearchForm = ({ handleChange }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <StyledForm>
+    <StyledForm onSubmit={handleSubmit}>
       <InputWrapper>
         <Icon>
           <FaSearch />
         </Icon>
-        <SearchInput name="inp" placeholder="Search for a country..." />
+        <SearchInput
+          name="input"
+          placeholder="Search for a country..."
+          onChange={handleChange}
+        />
       </InputWrapper>
       <SelectWrapper>
-        <SelectInput>
+        <SelectInput name="select" onChange={handleChange}>
           <option value="">Filter by Region</option>
           <option value="Africa">Africa</option>
           <option value="America">America</option>

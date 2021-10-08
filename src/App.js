@@ -4,6 +4,9 @@ import { Home } from "./pages/Home/Home.js";
 import { Details } from "./pages/Details/Details.js";
 import { GlobalStyle } from "./style/GlobalStyles.js";
 import { AppWrapper } from "./style/StyledAppWrapper.js";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
@@ -11,10 +14,12 @@ function App() {
       <GlobalStyle />
       <AppWrapper>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/:id" children={<Details />}></Route>
+          <QueryClientProvider client={queryClient}>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/:id" children={<Details />}></Route>
+          </QueryClientProvider>
         </Switch>
       </AppWrapper>
     </Router>
