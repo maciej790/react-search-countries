@@ -1,14 +1,14 @@
 import { Item, Image, Description, Title } from "./StyledCountryItem";
 
-export const CountryItem = () => {
+export const CountryItem = ({ result }) => {
   return (
     <Item>
-      <Image />
+      <Image src={result.flags.png} />
       <Description>
-        <Title>Germany</Title>
-        <p>Population: 81,770,900</p>
-        <p>Region: Europe</p>
-        <p>Capital: Berlin</p>
+        <Title>{result.name.common}</Title>
+        <p>Population: {result.population}</p>
+        <p>Region: {result.region}</p>
+        <p>Capital: {result.capital}</p>
       </Description>
     </Item>
   );
