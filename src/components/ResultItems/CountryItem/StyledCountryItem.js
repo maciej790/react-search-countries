@@ -4,8 +4,10 @@ import { colors } from "../../../style/Variables";
 export const Item = styled.div`
   width: 80%;
   height: 400px;
-  background-color: ${colors.DarkBlue};
+  background-color: ${({ theme }) =>
+    theme === "light" ? colors.White : colors.DarkBlue};
   border-radius: 5px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
 `;
 
 export const Image = styled.img`

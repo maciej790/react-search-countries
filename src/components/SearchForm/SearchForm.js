@@ -1,4 +1,4 @@
-import React from "react";
+import { useContext } from "react";
 import {
   StyledForm,
   SearchInput,
@@ -8,8 +8,11 @@ import {
   SelectWrapper,
 } from "./StyledSearchForm.js";
 import { FaSearch } from "react-icons/fa";
+import { ThemeContext } from "../../lib/ContextTheme.js";
 
 export const SearchForm = ({ handleChange }) => {
+  const { theme } = useContext(ThemeContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -17,17 +20,18 @@ export const SearchForm = ({ handleChange }) => {
   return (
     <StyledForm onSubmit={handleSubmit}>
       <InputWrapper>
-        <Icon>
+        <Icon theme={theme}>
           <FaSearch />
         </Icon>
         <SearchInput
           name="input"
           placeholder="Search for a country..."
           onChange={handleChange}
+          theme={theme}
         />
       </InputWrapper>
       <SelectWrapper>
-        <SelectInput name="select" onChange={handleChange}>
+        <SelectInput name="select" onChange={handleChange} theme={theme}>
           <option value="">Filter by Region</option>
           <option value="Africa">Africa</option>
           <option value="America">America</option>

@@ -30,14 +30,17 @@ export const SearchInput = styled.input`
   height: 50px;
   border: none;
   outline: none;
-  background-color: ${colors.DarkBlue};
+  background-color: ${({ theme }) =>
+    theme === "light" ? colors.White : colors.DarkBlue};
   border-radius: 5px;
   text-align: center;
   padding-left: 20px;
-  color: ${colors.White};
+  color: ${({ theme }) => (theme === "light" ? colors.DarkGray : colors.White)};
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
 
   ::placeholder {
-    color: ${colors.White};
+    color: ${({ theme }) =>
+      theme === "light" ? colors.DarkGray : colors.White};
   }
 `;
 
@@ -52,7 +55,10 @@ export const SelectInput = styled.select`
   border: none;
   outline: none;
   padding: 0 0 0 10px;
-  background-color: ${colors.DarkBlue};
+  background-color: ${({ theme }) =>
+    theme === "light" ? colors.White : colors.DarkBlue};
   border-radius: 5px;
-  color: ${colors.White};
+  color: ${({ theme }) =>
+    theme === "light" ? colors.VeryDarkBlue1 : colors.White};
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
 `;
