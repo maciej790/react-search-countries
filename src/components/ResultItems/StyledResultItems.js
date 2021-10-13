@@ -5,9 +5,10 @@ export const Results = styled.section`
   margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 50px 50px;
   justify-items: center;
+  padding: 0 0 50px 0;
 `;
 
 export const LoadoningIcon = styled.div`
